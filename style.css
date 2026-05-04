@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f2fe, #f3e8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1f2937;
+}
+
+.game-container {
+  width: 95%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #1e3a8a;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.credit {
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.18);
+}
+
+.card h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-top: 0;
+}
+
+.mode-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.2);
+}
+
+.easy-btn {
+  background: #22c55e;
+  color: white;
+}
+
+.medium-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.hard-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.rules,
+.leaderboard-preview {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 18px;
+}
+
+.rules h3,
+.leaderboard-preview h3 {
+  margin-top: 0;
+  color: #334155;
+}
+
+.leaderboard-preview ol {
+  padding-left: 25px;
+  margin-bottom: 0;
+}
+
+.leaderboard-preview li {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.top-bar div {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+}
+
+.top-bar h3 {
+  margin: 5px 0 0;
+  font-size: 1.7rem;
+  color: #1e3a8a;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.word-card {
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  border: 2px solid #c7d2fe;
+  border-radius: 24px;
+  padding: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#termText {
+  font-size: 2.8rem;
+  color: #111827;
+  margin: 15px 0 25px;
+}
+
+.forbidden-section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.forbidden-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.forbidden-word {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.correct-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.skip-btn {
+  background: #f97316;
+  color: white;
+}
+
+.end-btn {
+  background: #64748b;
+  color: white;
+}
+
+.final-score {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin: 20px 0;
+}
+
+#endScreen {
+  text-align: center;
+}
+
+.name-entry {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+}
+
+.name-entry label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.name-entry input {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.save-score-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.play-again-btn {
+  background: #2563eb;
+  color: white;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 18px;
+  color: #334155;
+  font-weight: bold;
+}
+
+@media (max-width: 650px) {
+  .mode-buttons,
+  .top-bar,
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  #termText {
+    font-size: 2rem;
+  }
+}
