@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Say Less: Medical Terms Challenge</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="game-container">
+  <header>
+    <h1>Say Less: Medical Terms Challenge</h1>
+    <p>
+      Pick a difficulty, give clues, avoid the forbidden words, and score as many as you can in 30 seconds!
+    </p>
+    <p class="credit">Created by: Andrew Mike and Kristine Levitina</p>
+  </header>
+
+  <section id="startScreen" class="card">
+    <h2>Choose Difficulty</h2>
+
+    <div class="mode-buttons">
+      <button class="easy-btn" onclick="startGame('easy')">Easy</button>
+      <button class="medium-btn" onclick="startGame('medium')">Medium</button>
+      <button class="hard-btn" onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div class="rules">
+      <h3>How to Play</h3>
+      <p>One player gives clues to help others guess the medical term.</p>
+      <p><strong>Do not say</strong> any of the forbidden words listed on the card.</p>
+      <p>Click <strong>Correct</strong> when the team guesses the word. A new term will appear automatically.</p>
+    </div>
+
+    <div class="leaderboard-preview">
+      <h3>High Scores</h3>
+      <ol id="startLeaderboard"></ol>
+    </div>
+  </section>
+
+  <section id="gameScreen" class="card hidden">
+    <div class="top-bar">
+      <div>
+        <span class="label">Mode</span>
+        <h3 id="modeText">Easy</h3>
+      </div>
+
+      <div>
+        <span class="label">Score</span>
+        <h3 id="scoreText">0</h3>
+      </div>
+
+      <div>
+        <span class="label">Time</span>
+        <h3 id="timerText">30</h3>
+      </div>
+    </div>
+
+    <div class="word-card">
+      <p class="label">Medical Term</p>
+      <h2 id="termText">Hypertension</h2>
+
+      <div class="forbidden-section">
+        <p class="label">Do NOT say:</p>
+        <div id="forbiddenWords" class="forbidden-words"></div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="correct-btn" onclick="correctAnswer()">Correct</button>
+      <button class="skip-btn" onclick="skipWord()">Skip</button>
+      <button class="end-btn" onclick="endGame()">End Round</button>
+    </div>
+  </section>
+
+  <section id="endScreen" class="card hidden">
+    <h2>Round Over!</h2>
+    <p>Your final score is:</p>
+    <div id="finalScore" class="final-score">0</div>
+
+    <div class="name-entry">
+      <label for="playerName">Enter your name for the high score board:</label>
+      <input type="text" id="playerName" placeholder="Your name" maxlength="20" />
+      <button class="save-score-btn" onclick="saveHighScore()">Save Score</button>
+    </div>
+
+    <div class="leaderboard-preview">
+      <h3>High Scores</h3>
+      <ol id="endLeaderboard"></ol>
+    </div>
+
+    <button class="play-again-btn" onclick="resetGame()">Play Again</button>
+  </section>
+
+  <footer>
+    Created by: Andrew Mike and Kristine Levitina
+  </footer>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
